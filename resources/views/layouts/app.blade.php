@@ -47,7 +47,7 @@
                             <a class="nav-link" href="/cart">Panier</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="/contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-light ms-lg-3 px-3" href="#">Login</a>
@@ -58,7 +58,7 @@
         </nav>
     </header>
     @yield('contenu')
-    <footer class="bg-dark text-light py-4">
+    <footer class="bg-dark text-light py-4 ">
         <div class="container text-center">
             <p class="mb-0">© 2025 MatShop · Tous droits réservés</p>
         </div>
