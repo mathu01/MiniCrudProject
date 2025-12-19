@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function acceuil(){
-        return view('pages.index');
+        return view('Pages.index');
     }
     public function articles(){
         $article = Articles::all();
-        return view('pages.articles',compact('article'));
+        return view('Pages.articles',compact('article'));
     }
     public function show($id){
         $article = Articles::findOrfail($id);
-        return view('pages.show_articles',compact('article'));
+        return view('Pages.show_articles',compact('article'));
     }
 }

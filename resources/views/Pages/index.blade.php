@@ -8,12 +8,9 @@
             <p class="lead mb-5">
                 Découvrez des articles modernes, disponibles dans notre stock.
             </p>
-            <a href="#" class="btn btn-warning btn-custom fw-semibold me-3">
+            <a href="{{route('pages.articles')}}" class="btn btn-warning btn-custom fw-semibold me-3">
                 Visiter les articles
             </a>
-            <a href="#" class="btn btn-outline-light btn-custom fw-semibold">
-                Se connecter
-            </a>
         </div>
-</section>
+    </section>
 @endsection

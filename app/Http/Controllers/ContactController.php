@@ -11,8 +11,11 @@ class ContactController extends Controller
         return view('Contact.formulaire');
     }
     public function send(Request $request){
+        $request->validate([
+            'message' => 'required|min:10',
+        ]);
         Mail::raw($request->message, function ($mail) use ($request){
-            $mail->to('admin@gmail.com')
+            $mail->to('mathurinamadou@gmail.com')
                  ->subject('Message de contact');
         });
         return back()->with('success','Message envoyé');

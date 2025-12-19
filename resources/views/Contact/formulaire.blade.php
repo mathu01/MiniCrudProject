@@ -10,7 +10,8 @@
                  <div class="card shadow border-0">
                      <div class="card-body p-4">
                          <h3 class="text-center fw-bold mb-4">Contactez-nous</h3>
-                         <form action="#" method="post">
+                         <form action="{{ route('contact.send') }}" method="post">
+                             @csrf
                              <div class="row mb-3">
                                  <div class="col">
                                      <label class="form-label">Nom</label>
@@ -40,7 +41,10 @@
                              </div>
                              <div class="mb-3">
                                  <label class="form-label">Message</label>
-                                 <textarea class="form-control" rows="4" placeholder="Votre message..."></textarea>
+                                 <textarea name="message" class="form-control @error('message') is-invalid @enderror" rows="4" placeholder="Votre message...">{{ old('message') }}</textarea>
+                                 @error('message')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                 @enderror
                              </div>
                              <div class="d-grid">
                                  <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
